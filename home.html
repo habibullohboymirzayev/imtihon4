@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelter</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="container">
+    
+    <header>
+        <div class="container mt-2 d-flex justify-content-between align-content-center mb-4">
+            <img src="./images/book-logo.svg" alt="book-logo">
+            <form id="form">
+                <input  id="search_input" class="form-control bg-light border-0 rounded-pill " type="text" placeholder="Search books" >
+            </form>
+            <img src="./images/sun-logo.svg" alt="sun-logo" id="icon">
+            <button type="button" class="btn btn-primary logout-btn">Logout</button>
+
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="alert alert-light shadow-none p-3 mb-5 bg-light rounded d-flex align-content-center justify-content-between">
+                <p class="m-0 fw-bold">Showing <span id="showing__result">0</span> Result(s)</p>
+                <button id="order_by_newst" type="button" class="btn btn-secondary ">Order by newest</button>
+            </div>
+        </div>
+        
+        <!-- ---------------------------------------------------------------- -->
+        
+        <div class="row">
+            <div class="col-md-3 border-end p-3 mb-5  bg-body rounded">
+                <h3 class="mb-1 text">Bookmarks</h3>
+                <p class=" mb-4 bookmark__text fw-bold">If you don’t like to read, you haven’t found the right book</p>
+                
+                <ul class="m-0 p-0" id="bookmark_list_grop">
+             
+                    
+                </ul>
+            </div>
+            
+            <!-- ------------------------------------------------------------ -->
+            
+            <div class="col-md-9 bg-light p-4 d-flex flex-wrap" id="wrapper" >
+                <img class="spenner" src="./images/loding.svg.svg" alt="loding" width="150" height="150">
+                
+        
+                </div>
+            </div> 
+            
+        </div>
+    </main>
+    
+    
+    
+    <!-- Modal -->
+    <div class="modal fade books__modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Python</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <img class="rounded mx-auto d-block mb-3 modal-img" src="./images/book-img.png" alt="books png" width="200" height="200">
+                <div class="modal-body mb-2">
+                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aspernatur magnam. Reprehenderit possimus labore, explicabo quis tempora vitae deserunt, sunt, accusantium aut amet fuga cum! Saepe, excepturi neque? Tempora, earum!
+                </div>
+
+                <div class="">
+                        <p>Author: <span class="modal_author text-white bg-info rounded-pill border border-2">Jamal Kasper</span></p>
+                        <p>Published: <span class="modal_published text-white bg-info rounded-pill border border-2">2019</span></p>
+                        <p>Publishers: <span class="modal_publishers text-white bg-info rounded-pill border border-2">Computers</span></p>
+                        <p>Categories: <span class="modal_categories text-white bg-info rounded-pill border border-2">Hollman</span></p>
+                        <p>Pages Count: <span class="modal_count text-white bg-info rounded border ">346</span></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+    
+    <template class="wrapper-templale">
+        <div class="card mb-4 me-3 shadow p-3 mb-5 bg-body rounded" style="width: 17rem;">
+            <img  src="./images/book-img.png" id="card-img-top" class=" p-3 bg-light rounded-3 p-3" alt="book-img" width="202" height="202">
+            <div class="card-body">
+                <h5 id="card-title">Python</h5>
+                <p class="card-text fw-bold text-secondary m-0" id="card-text">David M. Beazley</p>
+                <p class="m-0"><span id="card-year">2009</span></p>
+            </div>
+            <div class="pb-3">
+                <button class="btn btn-warning mb-1" id="bookmark__btn">Bookmarks</button>
+                <button type="button" class="btn btn-light text-info mb-1  w-50 h-50" id="info__btn" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                    More info
+                </button>
+               
+                <a class="btn btn-secondary btn-md w-100 h-50   " id="read__btn" href="">More Read</a>
+            </div> 
+        </div>
+    </template>
+    
+    <template class="bookmark-temlate">
+        <li class="list-unstyled border rounded bg-light border-0 d-flex align-content-center justify-content-around bokmark__list pt-3 p-lg-2 mb-2">
+            <div>
+                <h4 id="bookmark__title">Python</h4>
+                <p class="fw-bolder text-secondary" id="bookmark__text">David M. Beazley</p>
+            </div>
+            
+            <a id="bookmark__link" href=""><img class="p-0 mt-4"  src="./images/bookmark-book-logo.svg" alt="book logo"></a>
+            <button type="button" id="bookmark__delate" class="border-0 btn btn-light p-0  mb-3 shadow-none"><img src="./images/bookmark-delate-logo.svg" alt="bookmark-book-logo"></button>
+        </li>
+    </template>
+    
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

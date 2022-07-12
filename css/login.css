@@ -1,0 +1,57 @@
+.body{
+    background-image:url(./../images/bg-login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.container {
+    position: absolute;
+    left: 585px;
+    top: 198px;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.logo{
+    padding-bottom: 51px;
+
+    
+}
+
+.user__wrapper{
+    padding-bottom: 20px;
+}
+
+
+.username-input{
+    width: 300px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+}
+
+.password__wrapper{
+    padding-bottom: 43px;
+}
+
+.password-input{
+    width: 300px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+.form__btn{
+    width: 300px;
+    height: 45px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    color: blue;
+}

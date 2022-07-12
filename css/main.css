@@ -1,0 +1,25 @@
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.spenner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50,-50);
+    z-index: 999;
+}
+
+.form-control{
+    width: 670px;
+    height: 48px
+}
+
+.bookmark__text{
+    max-width: 218px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
